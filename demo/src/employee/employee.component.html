@@ -1,0 +1,9 @@
+<h1>EployeeComponent</h1>
+<ul>
+    <li ng-repeat="mes in vm.employee">
+        id : {{mes.id}} name : {{mes.name}}, age : {{mes.age}}
+        <button ng-click="vm.Delete(mes.id)">Delete</button>
+    </li>
+</ul>
+<button ng-click="vm.Click()">Click</button>
+<a href="/">Back</a>
