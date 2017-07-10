@@ -11,7 +11,7 @@ export class EmployeeController {
 
         this.Delete = function (id:number) {
             employeeService.Delete(id);
-            employeeService.getAll();
+            employeeService.all();
             alert("Da xoa");
         }
     }

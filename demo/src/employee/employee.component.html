@@ -17,7 +17,7 @@
                             <tr ng-repeat="mes in vm.employee">
                                 <th scope="row">{{mes.id}}</a>
                                 </th>
-                                <td>{{mes.name}}</td>
+                                <td><message-text [text]="mes.name"></message-text></td>
                                 <td>{{mes.age}}</td>
                                 <td><button type="button" class="btn btn-warning" ng-click="vm.Delete(mes.id)">Xóa</button>
                                 <!--<button type="button" class="btn btn-warning" ng-click="vm.Sua()">Sửa</button>-->

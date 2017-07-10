@@ -13,6 +13,7 @@ import { RouterUpgradeInitializer } from '@angular/router/upgrade';
 // import {MessagesNgModule} from './messages';
 import { HomeNgModule } from './home/home.module';
 import { ContactNgModule } from './contact/contact.module';
+import { MessageNgModule } from './employee/employee.module';
 
 
 
@@ -40,7 +41,7 @@ export class RootCmp { }
     // import all modules
     HomeNgModule,
     ContactNgModule,
-
+    MessageNgModule,
     // MessagesNgModule,
     // SettingsNgModule,
 
