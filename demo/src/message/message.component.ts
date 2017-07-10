@@ -10,18 +10,7 @@ export class MessageController {
     }
 }
 export const MessageComponent = {
-    template: `
-    <h1>MessagesComponent</h1>
-    <p>Search</p>
-    <input type="text" placeholder="search">
-    <button ng-click="vm.Search()">Search</button>
-    <ul>
-        <li ng-repeat = "mes in vm.messages">
-            <a href="/message/{{mes.id}}">{{mes.id}}</a>
-        </li>
-    </ul>
-    <a href="/">Back</a>
-  `,
+    templateUrl:'./src/message/message.html',
     controller: MessageController,
     controllerAs: 'vm'
 };

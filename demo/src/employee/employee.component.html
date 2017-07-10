@@ -1,9 +1,34 @@
-<h1>EployeeComponent</h1>
-<ul>
-    <li ng-repeat="mes in vm.employee">
-        id : {{mes.id}} name : {{mes.name}}, age : {{mes.age}}
-        <button ng-click="vm.Delete(mes.id)">Delete</button>
-    </li>
-</ul>
-<button ng-click="vm.Click()">Click</button>
-<a href="/">Back</a>
+<div class="container">
+    <div class="row example z-depth-2 grey lighten-4">
+        <div class="col-lg-12">
+            <h1>Lấy danh sách nhân viên bằng service angular1</h1>
+            <div class="row">
+                <div class="col-lg-8">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Địa chỉ</th>
+                                <th>Tùy chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="mes in vm.employee">
+                                <th scope="row">{{mes.id}}</a>
+                                </th>
+                                <td>{{mes.name}}</td>
+                                <td>{{mes.age}}</td>
+                                <td><button type="button" class="btn btn-warning" ng-click="vm.Delete(mes.id)">Xóa</button>
+                                <!--<button type="button" class="btn btn-warning" ng-click="vm.Sua()">Sửa</button>-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--<button ng-click="vm.Click()">Click</button>-->
+            <button type="button" class="btn btn-warning"><a href="/">Back</a></button>
+        </div>
+    </div>
+</div>

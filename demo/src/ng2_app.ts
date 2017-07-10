@@ -3,15 +3,15 @@
  */
 
 // import angular2
-import {NgModule, Component} from '@angular/core';
-import {RouterModule, UrlHandlingStrategy} from '@angular/router';
-import {BrowserModule} from '@angular/platform-browser';
-import {UpgradeModule} from '@angular/upgrade/static';
-import {RouterUpgradeInitializer} from '@angular/router/upgrade';
+import { NgModule, Component } from '@angular/core';
+import { RouterModule, UrlHandlingStrategy } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { UpgradeModule } from '@angular/upgrade/static';
+import { RouterUpgradeInitializer } from '@angular/router/upgrade';
 
 // import app modules
 // import {MessagesNgModule} from './messages';
-import {HomeNgModule} from './home/home.module';
+import { HomeNgModule } from './home/home.module';
 import { ContactNgModule } from './contact/contact.module';
 
 
@@ -19,22 +19,18 @@ import { ContactNgModule } from './contact/contact.module';
 // This URL handling strategy is custom and application-specific.
 // Using it we can tell the Angular 2 router to handle only URL starting with settings.
 export class Ng1Ng2UrlHandlingStrategy implements UrlHandlingStrategy {
-  shouldProcessUrl(url) { 
+  shouldProcessUrl(url) {
     return url.toString().startsWith("/contact"); // bắt buộc có nếu muốn 
-  } 
+  }
   extract(url) { return url; }
   merge(url, whole) { return url; }
 }
 
 @Component({
   selector: 'root-cmp',
-  template: `
-  
-    <router-outlet></router-outlet>
-    <div class="ng-view"></div>
-  `,
+  templateUrl: './app2.html',
 })
-export class RootCmp {}
+export class RootCmp { }
 
 @NgModule({
   imports: [
@@ -44,7 +40,7 @@ export class RootCmp {}
     // import all modules
     HomeNgModule,
     ContactNgModule,
-    
+
     // MessagesNgModule,
     // SettingsNgModule,
 
@@ -60,5 +56,5 @@ export class RootCmp {}
   declarations: [RootCmp]
 })
 export class Ng2AppModule {
-  constructor(public upgrade: UpgradeModule){}
+  constructor(public upgrade: UpgradeModule) { }
 }

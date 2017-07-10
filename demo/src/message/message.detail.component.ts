@@ -12,11 +12,7 @@ export class MessageDetailController {
 }
 
 export const MessageDetailComponent = {
-    template: `
-    <h1>Message id : {{vm.message.id}}</h1>
-    <p>text : {{vm.message.text}}</p>
-    <a href="/">Back</a>
-    `,
+    templateUrl:'./src/message/detail.html' ,
     controller: MessageDetailController,
     controllerAs: 'vm'
 }

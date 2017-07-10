@@ -1,20 +1,20 @@
 import { EmployeeService, Employees } from './employee.service';
 export class EmployeeController {
     Click;
+    Delete;
     employee: Employees[];
 
     constructor($routeParams, employeeService: EmployeeService) {
         this.employee = employeeService.employees;
 
-        this.Click = function () {
-            employeeService.getAll();
-        }
+        
 
-        this.Delete = function (id) {
+        this.Delete = function (id:number) {
             employeeService.Delete(id);
+            employeeService.getAll();
+            alert("Da xoa");
         }
     }
-    Delete;
 }
 export const EmployeeComponent = {
     templateUrl: './src/employee/employee.component.html',// cái html angular1 bắt buộc phải có ./src/... đi từ nguồn

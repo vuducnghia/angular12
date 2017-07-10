@@ -11,12 +11,7 @@ class LoginController{
     
 }
 export const LoginComponent={
-    template : `
-        <p>Login</p>
-        <input type = "text" ng-model="vm.user" placeholder ="username">
-        <input type = "password" ng-model="vm.pass" placeholder ="password">
-        <button ng-click="vm.login()">Login</button>
-    `,
+    templateUrl :'./src/login/login.html',
     controller : LoginController,
     controllerAs: 'vm'
 }

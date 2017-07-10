@@ -1,1 +1,60 @@
-<h1>Welcome to Contact</h1>
+<div class="container">
+    <div class="row example z-depth-2 grey lighten-4">
+        <div class="col-lg-12">
+
+            <!-- o tim kiem -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <form (ngSubmit)="search()">
+                        <div class="md-form input-group">
+                            <input name="search" [(ngModel)]="key" type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary btn-lg" type="submit" (click)="search()">Search</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div *ngIf="person">
+                <h2><strong> Lấy danh sách các nhân viên bằng service angular2</strong></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-8" >
+                    <table class="table table-bordered table-striped table-hover example hoverable">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Địa chỉ</th>
+                                <th>Mssv</th>
+                                <th>Tùy Chọn</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let list of person; let i = index">
+                                <th scope="row">{{list.id}}</th>
+                                <td>{{list.name}}</td>
+                                <td>{{list.diachi}}</td>
+                                <td>{{list.mssv}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-warning"><a [routerLink]="['/contact',list.id]">Chi Tiết</a></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3><strong>Thêm Nhân Viên</strong></h3>
+                    <form (ngSubmit)="them()">
+                        <p>Name:<input type="text" name="ten" value="" [(ngModel)]="contact.name"></p>
+                        <p>Mssv:<input type="text" name="msv" value="" [(ngModel)]="contact.mssv"></p>
+                        <p>Dia chi:<input type="text" name="dc" value="" [(ngModel)]="contact.diachi"></p>
+                        <button type="submit" class="btn btn-danger">Them</button>
+                    </form>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger"><a href="/">Back</a></button>
+        </div>
+    </div>
+</div>

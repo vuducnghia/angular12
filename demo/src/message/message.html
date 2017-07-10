@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row example z-depth-2 grey lighten-4">
+        <div class="col-lg-12">
+            <!-- phan tieu de-->
+            <h1>MessagesComponent</h1>
+            
+            <!-- phan hien thi noi dung -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <table class="table table-bordered table-striped table-hover example hoverable">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>ID</th>
+                                <th>Text</th>
+                                <th>Folder</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="mes in vm.messages">
+
+                                <th scope="row"><a href="/message/{{mes.id}}">{{mes.id}} </a></th>
+                                <td>{{mes.text}}</td>
+                                <td>{{mes.folder}}</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="/" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+            <!-- het phan noi dung -->
+        </div>
+    </div>
+</div>

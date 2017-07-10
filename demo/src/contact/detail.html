@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row example z-depth-2 grey lighten-4">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form (ngSubmit)="save()">
+                        <p>Name:<input type="text" name="name" value="" [(ngModel)]="detail.name"></p>
+                        <p>Mssv:<input type="text" name="mssv" value="" [(ngModel)]="detail.mssv"></p>
+                        <p>Dia chi:<input type="text" name="diachi" value="" [(ngModel)]="detail.diachi"></p>
+                        <button type="submit" class="btn btn-danger">Save</button>
+                        <button type="button" class="btn btn-warning" (click)="cancle()"><a [routerLink]="['/contact']">Cancle</a>
+                        </button>
+                        <button type="button" class="btn btn-warning" (click)="xoa()"><a [routerLink]="['/contact']">Delete</a>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
