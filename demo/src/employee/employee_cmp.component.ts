@@ -8,4 +8,4 @@ import {Component, Input} from '@angular/core';
 })
 export class MessageTextCmp {
   @Input() text: string;
-} 
+}

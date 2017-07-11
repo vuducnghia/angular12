@@ -12,7 +12,8 @@ export class EmployeeController {
         this.Delete = function (id:number) {
             employeeService.Delete(id);
             employeeService.all();
-            alert("Da xoa");
+            alert("Da xoa thanh cong");
+            alert("Load lai trang de cap nhat ket qua");
         }
     }
 }

@@ -49,7 +49,7 @@ export class DetailComponent {
     xoa(){
         this.service.xoa(this.id).subscribe(respon=>{
             alert("Da xoa");
-            // this.route.navigate(['/contact']);
+            this.route.navigate(['/contact']);
         })
     }
 

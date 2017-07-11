@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div *ngIf="person">
-                <h2><strong> Lấy danh sách các nhân viên bằng service angular2</strong></h2>
+                <h2><strong> Lấy danh sách các sinh viên bằng service angular2</strong></h2>
             </div>
             <div class="row">
                 <div class="col-lg-8" >
@@ -46,11 +46,11 @@
 
                 <div class="col-lg-4">
                     <h3><strong>Thêm Nhân Viên</strong></h3>
-                    <form (ngSubmit)="them()">
-                        <p>Name:<input type="text" name="ten" value="" [(ngModel)]="contact.name"></p>
-                        <p>Mssv:<input type="text" name="msv" value="" [(ngModel)]="contact.mssv"></p>
-                        <p>Dia chi:<input type="text" name="dc" value="" [(ngModel)]="contact.diachi"></p>
-                        <button type="submit" class="btn btn-danger">Them</button>
+                    <form (ngSubmit)="them()" #form="ngForm">
+                        <p>Name:<input type="text" name="ten" [(ngModel)]="contact.name" required #name="ngModel"></p>
+                        <p>Mssv:<input type="number" name="msv"  [(ngModel)]="contact.mssv" required></p>
+                        <p>Dia chi:<input type="text" name="dc"  [(ngModel)]="contact.diachi" required></p>
+                        <button type="submit" class="btn btn-danger" [disabled]="!form.form.valid">Them</button>
                     </form>
                 </div>
             </div>

@@ -17,10 +17,15 @@
                             <tr ng-repeat="mes in vm.employee">
                                 <th scope="row">{{mes.id}}</a>
                                 </th>
+                                
+                                <!-- doan nay su dung trao doi du lieu giua 2 angular -->
                                 <td><message-text [text]="mes.name"></message-text></td>
+
+                                <!-- het -->
+
                                 <td>{{mes.age}}</td>
                                 <td><button type="button" class="btn btn-warning" ng-click="vm.Delete(mes.id)">Xóa</button>
-                                <!--<button type="button" class="btn btn-warning" ng-click="vm.Sua()">Sửa</button>-->
+                                <!--<button type="button" class="btn btn-warning" ng-click="vm.sua()">Sửa</button>-->
                                 </td>
                             </tr>
                         </tbody>
